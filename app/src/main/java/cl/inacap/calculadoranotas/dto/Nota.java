@@ -21,7 +21,7 @@ public class Nota {
     }
 
     @Override
-    public String toString(){
+    public String toString() {
         return valor + " " + porcentaje + "%";
     }
-    ;}
+}

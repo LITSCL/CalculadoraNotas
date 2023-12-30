@@ -74,7 +74,8 @@ public class MainActivity extends AppCompatActivity {
                 if (errores.isEmpty()) {
                     if (porcentaje + porcentajeActual > 100) {
                         Toast.makeText(MainActivity.this, "El porcentaje es mayor que 100", Toast.LENGTH_SHORT).show();
-                    } else {
+                    } 
+                    else {
                         Nota n = new Nota();
                         n.setValor(nota);
                         n.setPorcentaje(porcentaje);
@@ -88,7 +89,6 @@ public class MainActivity extends AppCompatActivity {
                 else {
                     mostrarErrores(errores);
                 }
-
             }
         });
         this.limpiarBtn.setOnClickListener(new View.OnClickListener() {
@@ -111,11 +111,11 @@ public class MainActivity extends AppCompatActivity {
         }
         AlertDialog.Builder alertBuilder = new AlertDialog.Builder(MainActivity.this); //En el argumento se establece que Activity mostrará el mensaje.
         alertBuilder
-                .setTitle("Error de validación") //Define el titulo.
-                .setMessage(mensaje) //Define el mensaje del dialogo.
-                .setPositiveButton("Aceptar", null) //Agrega el botón aceptar.
-                .create() //Crea el Alert.
-                .show(); //Se muestra el Alert.
+            .setTitle("Error de validación") //Define el titulo.
+            .setMessage(mensaje) //Define el mensaje del dialogo.
+            .setPositiveButton("Aceptar", null) //Agrega el botón aceptar.
+            .create() //Crea el Alert.
+            .show(); //Se muestra el Alert.
     }
 
     private void mostrarPromedio() {
@@ -131,7 +131,4 @@ public class MainActivity extends AppCompatActivity {
         }
         this.promedioLl.setVisibility(View.VISIBLE);
     }
-
-
-
 }
